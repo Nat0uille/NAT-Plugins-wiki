@@ -31,16 +31,15 @@ You must go to:
 
 **There are two choices for database types:**
 
-| Type       | Description                                                                                                                                |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **SQLite** | Local storage in a `database.db` file inside the plugin folder. Recommended for small configurations or servers with no external database. |
-| **MySQL**  | Storage on an external database. Ideal for multi-server servers or if you want to back up your data separately.                            |
+| Type      | Description                                                                                                                                |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **H2**    | Local storage in a `database.db` file inside the plugin folder. Recommended for small configurations or servers with no external database. |
+| **MySQL** | Storage on an external database. Ideal for multi-server servers or if you want to back up your data separately.                            |
+| MariaDB   | Storage on an external database. Ideal for multi-server servers or if you want to back up your data separately.                            |
 
 ```yml
 database:
-  # Format: MySQL / SQLite
-  type: SQLite
-  # For MySQL, fill in the following fields
+  type: H2
   host: localhost
   port: 3306
   database: nat_whitelist
